@@ -19,26 +19,26 @@ public class Main {
         Author fullName = new Author("Artur Konan Doil");
         Author secondFullName = new Author("Barbara Mitchelhill");
         System.out.println("fullName.fullName=" + fullName.getFullName());
-        System.out.println("secondFullName.secondFullName="+secondFullName.getFullName());
+        System.out.println("secondFullName.secondFullName=" + secondFullName.getFullName());
 
 
-        Book myBookFirst = new Book("theLostWorld", 1984);
+        Book myBookFirst = new Book("theLostWorld", 1984, ArturKonanDoil);
 
 
         System.out.println("myBookFirst.titleOfTheBook = " + myBookFirst.titleOfTheBook());
         System.out.println("myBookFirst.yearOfPublicationOfTheBook = " + myBookFirst.getyearOfPublicationOfTheBook());
-        System.out.println("myBookFirst.titleOfTheBook = " +  myBookFirst.titleOfTheBook() + ",  " +
-                "myBookFirst.yearOfPublicationOfTheBook = " + myBookFirst.getyearOfPublicationOfTheBook() + ",  " +
-                "fullName.fullName=" + fullName.getFullName());
-        Book myBookSecond = new Book("seeYouSoon", 2000);
+        System.out.println("myBookFirst.author = " + myBookFirst.author());
+
+        Book myBookSecond = new Book("seeYouSoon", 2000, BarbaraMitchelhill);
 
 
         System.out.println("myBookSecond.titleOfTheBook = " + myBookSecond.titleOfTheBook());
         System.out.println("myBookSecond.yearOfPublicationOfTheBook = " + myBookSecond.getyearOfPublicationOfTheBook());
-        System.out.println("myBookSecond.titleOfTheBook = " +  myBookSecond.titleOfTheBook() + ",  " +
-                "myBookSecond.yearOfPublicationOfTheBook = " + myBookSecond.getyearOfPublicationOfTheBook() + ",  " +
-                "secondFullName.secondFullName=" + secondFullName.getFullName());
+        System.out.println("myBookSecond.author = " + myBookSecond.author());
+
+
         myBookSecond.setYearOfPublicationOfTheBook(2022);
+
         System.out.println("myBookSecond.yearOfPublicationOfTheBook = " + myBookSecond.getyearOfPublicationOfTheBook());
     }
 }
