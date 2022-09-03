@@ -2,21 +2,16 @@ public class Book {
 
     private String titleOfTheBook;
     private int yearOfPublicationOfTheBook;
+    private Author fullName;
 
-    private Author author;
-
-
-    public Book(String titleOfTheBook, int yearOfPublicationOfTheBook, Author author) {
+    public Book(String titleOfTheBook, int yearOfPublicationOfTheBook,Author fullName) {
         this.yearOfPublicationOfTheBook = yearOfPublicationOfTheBook;
         this.titleOfTheBook = titleOfTheBook;
-        this.author = author;
+        this.fullName=fullName;
     }
-
-
-    public Author author() {
-        return this.author;
-    }
-
+    public Author getFullName(){
+        return this.fullName;
+}
     public String titleOfTheBook() {
         return this.titleOfTheBook;
 
@@ -29,5 +24,14 @@ public class Book {
 
     public void setYearOfPublicationOfTheBook(int yearOfPublicationOfTheBook) {
         this.yearOfPublicationOfTheBook = yearOfPublicationOfTheBook;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "titleOfTheBook='" + titleOfTheBook + '\'' +
+                ", yearOfPublicationOfTheBook=" + yearOfPublicationOfTheBook +
+                ", fullName=" + fullName +
+                '}';
     }
 }
