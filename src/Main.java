@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Author firstAutor = new Author("Artur", "Konan Doil");
+        Author firstAutor = new Author("Artur", " Konan Doil");
 
         System.out.println("firstAutor.firstName = " + firstAutor.getFirstName());
         System.out.println("firstAutor.lastName = " + firstAutor.getLastName());
