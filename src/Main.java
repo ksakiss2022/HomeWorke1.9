@@ -18,5 +18,10 @@ public class Main {
 
         myBookSecond.setYearOfPublicationOfTheBook(2022);
         System.out.println("myBookSecond.yearOfPublicationOfTheBook = " + myBookSecond.getyearOfPublicationOfTheBook());
+
+        // 1/10
+        System.out.println("myBookFirst = " + myBookFirst);
+        System.out.println("myBookSecond =" + myBookSecond);
     }
+
 }
