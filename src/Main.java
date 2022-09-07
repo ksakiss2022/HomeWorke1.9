@@ -6,18 +6,18 @@ public class Main {
         Book myBookFirst = new Book("theLostWorld", 1984, firstAutor);
 
         System.out.println("myBookFirst.titleOfTheBook = " + myBookFirst.titleOfTheBook() + ", " +
-                "yearOfPublicationOfTheBook = " + myBookFirst.getyearOfPublicationOfTheBook() + ", " +
+                "yearOfPublicationOfTheBook = " + myBookFirst.getYearOfPublicationOfTheBook() + ", " +
                 "fullName" + myBookFirst.getFullName());
 
         Book myBookSecond = new Book("seeYouSoon", 2000, seconAuthor);
 
 
         System.out.println("myBookSecond.titleOfTheBook = " + myBookSecond.titleOfTheBook() + ", " +
-                "yearOfPublicationOfTheBook = " + myBookSecond.getyearOfPublicationOfTheBook() + ", " +
+                "yearOfPublicationOfTheBook = " + myBookSecond.getYearOfPublicationOfTheBook() + ", " +
                 "fullName" + myBookSecond.getFullName());
 
         myBookSecond.setYearOfPublicationOfTheBook(2022);
-        System.out.println("myBookSecond.yearOfPublicationOfTheBook = " + myBookSecond.getyearOfPublicationOfTheBook());
+        System.out.println("myBookSecond.yearOfPublicationOfTheBook = " + myBookSecond.getYearOfPublicationOfTheBook());
 
         // 1/10
         System.out.println("myBookFirst = " + myBookFirst);

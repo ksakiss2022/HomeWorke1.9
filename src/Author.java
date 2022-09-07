@@ -13,10 +13,12 @@ public class Author {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Author author = (Author) o;
+    public boolean equals(Object other) {
+
+        if (this.getClass()  != other.getClass()) {
+            return false;
+        }
+        Author author = (Author) other;
         return Objects.equals(firstName, author.firstName);
     }
 

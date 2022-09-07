@@ -16,10 +16,11 @@ public class Book {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
+    public boolean equals(Object other) {
+        if (this.getClass() != this.getClass()) {
+            return false;
+        }
+        Book book = (Book) this;
         return Objects.equals(titleOfTheBook, book.titleOfTheBook);
     }
 
@@ -43,7 +44,7 @@ public class Book {
 
     }
 
-    public int getyearOfPublicationOfTheBook() {
+    public int getYearOfPublicationOfTheBook() {
         return this.yearOfPublicationOfTheBook;
 
     }
