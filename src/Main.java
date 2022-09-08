@@ -16,12 +16,14 @@ public class Main {
                 "yearOfPublicationOfTheBook = " + myBookSecond.getYearOfPublicationOfTheBook() + ", " +
                 "fullName" + myBookSecond.getFullName());
 
+
         myBookSecond.setYearOfPublicationOfTheBook(2022);
         System.out.println("myBookSecond.yearOfPublicationOfTheBook = " + myBookSecond.getYearOfPublicationOfTheBook());
 
         // 1/10
         System.out.println("myBookFirst = " + myBookFirst);
         System.out.println("myBookSecond =" + myBookSecond);
+
     }
 
 }

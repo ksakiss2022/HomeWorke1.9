@@ -5,6 +5,19 @@ public class Author {
     private String lastName;
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return firstName.equals(author.firstName) && lastName.equals(author.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName);
+    }
+
+    @Override
     public String toString() {
         return "Author{" +
                 "firstName='" + firstName + '\'' +
@@ -12,20 +25,6 @@ public class Author {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object other) {
-
-        if (this.getClass()  != other.getClass()) {
-            return false;
-        }
-        Author author = (Author) other;
-        return Objects.equals(firstName, author.firstName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(firstName);
-    }
 
     public Author(String firstName, String lastName) {
         this.lastName = lastName;

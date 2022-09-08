@@ -7,6 +7,19 @@ public class Book {
     private Author fullName;
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return yearOfPublicationOfTheBook == book.yearOfPublicationOfTheBook && titleOfTheBook.equals(book.titleOfTheBook) && fullName.equals(book.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(titleOfTheBook, yearOfPublicationOfTheBook, fullName);
+    }
+
+    @Override
     public String toString() {
         return "Book{" +
                 "titleOfTheBook='" + titleOfTheBook + '\'' +
@@ -15,19 +28,6 @@ public class Book {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object other) {
-        if (this.getClass() != this.getClass()) {
-            return false;
-        }
-        Book book = (Book) this;
-        return Objects.equals(titleOfTheBook, book.titleOfTheBook);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(titleOfTheBook);
-    }
 
     public Book(String titleOfTheBook, int yearOfPublicationOfTheBook, Author fullName) {
         this.yearOfPublicationOfTheBook = yearOfPublicationOfTheBook;
